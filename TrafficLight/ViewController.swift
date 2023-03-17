@@ -26,6 +26,7 @@ class ViewController: UIViewController {
         redLight.alpha = 0.3
         yellowLight.alpha = 0.3
         greenLight.alpha = 0.3
+        buttonName.layer.cornerRadius = 10
     }
     
     override func viewWillLayoutSubviews() {
