@@ -20,18 +20,18 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="NRW-eP-KNC">
                                 <rect key="frame" x="117" y="74" width="180" height="596"/>
                                 <subviews>
-                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gIP-h8-wME">
+                                    <view clipsSubviews="YES" alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gIP-h8-wME">
                                         <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="gIP-h8-wME" secondAttribute="height" multiplier="1:1" id="5qV-9t-p3X"/>
                                         </constraints>
                                     </view>
-                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RBJ-aW-fpo">
+                                    <view clipsSubviews="YES" alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RBJ-aW-fpo">
                                         <rect key="frame" x="0.0" y="208" width="180" height="180"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                                     </view>
-                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9H1-yN-DT9">
+                                    <view clipsSubviews="YES" alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9H1-yN-DT9">
                                         <rect key="frame" x="0.0" y="416" width="180" height="180"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                     </view>
@@ -50,7 +50,7 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rKz-3v-Ufk"/>
+                                    <action selector="changeLightButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="8HS-PJ-rte"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -65,7 +65,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="buttonName" destination="Oe3-8y-Fty" id="1kC-WX-9OJ"/>
+                        <outlet property="buttonName" destination="Oe3-8y-Fty" id="q2M-eX-PYJ"/>
                         <outlet property="greenLight" destination="9H1-yN-DT9" id="qeN-VT-lNw"/>
                         <outlet property="redLight" destination="gIP-h8-wME" id="HdV-dG-Vle"/>
                         <outlet property="yellowLight" destination="RBJ-aW-fpo" id="uCU-TV-ZZn"/>
