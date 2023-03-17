@@ -13,13 +13,48 @@ class ViewController: UIViewController {
     @IBOutlet weak var greenLight: UIView!
     @IBOutlet weak var buttonName: UIButton!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
-    @IBAction func buttonTapped(_ sender: Any) {
+    enum ChangeColor {
+        case red
+        case yellow
+        case green
     }
     
+    private var changeColor: ChangeColor = .red
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        redLight.alpha = 0.3
+        yellowLight.alpha = 0.3
+        greenLight.alpha = 0.3
+    }
+    
+    override func viewWillLayoutSubviews() {
+        redLight.layer.cornerRadius = redLight.layer.frame.width / 2
+        yellowLight.layer.cornerRadius = yellowLight.layer.frame.width / 2
+        greenLight.layer.cornerRadius = greenLight.layer.frame.width / 2
+        redLight.layer.masksToBounds = true
+        yellowLight.layer.masksToBounds = true
+        greenLight.layer.masksToBounds = true
+    }
+    
+    @IBAction func changeLightButtonTapped() {
+        buttonName.setTitle("NEXT", for: .normal)
+        
+        switch changeColor {
+        case .red:
+            greenLight.alpha = 0.3
+            redLight.alpha = 1
+            changeColor = .yellow
+        case .yellow:
+            redLight.alpha = 0.3
+            yellowLight.alpha = 1
+            changeColor = .green
+        case .green:
+            yellowLight.alpha = 0.3
+            greenLight.alpha = 1
+            changeColor = .red
+        }
+    }
 }
+
 
