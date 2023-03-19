@@ -7,19 +7,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
     @IBOutlet weak var redLight: UIView!
     @IBOutlet weak var yellowLight: UIView!
     @IBOutlet weak var greenLight: UIView!
     @IBOutlet weak var buttonName: UIButton!
     
-    enum ChangeColor {
-        case red
-        case yellow
-        case green
-    }
     
     private var changeColor: ChangeColor = .red
+    private let colorOn: CGFloat = 1.0
+    private let colorOff: CGFloat = 0.3
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,19 +40,26 @@ class ViewController: UIViewController {
         
         switch changeColor {
         case .red:
-            greenLight.alpha = 0.3
-            redLight.alpha = 1
+            greenLight.alpha = colorOff
+            redLight.alpha = colorOn
             changeColor = .yellow
         case .yellow:
-            redLight.alpha = 0.3
-            yellowLight.alpha = 1
+            redLight.alpha = colorOff
+            yellowLight.alpha = colorOn
             changeColor = .green
         case .green:
-            yellowLight.alpha = 0.3
-            greenLight.alpha = 1
+            yellowLight.alpha = colorOff
+            greenLight.alpha = colorOn
             changeColor = .red
         }
     }
 }
 
+extension ViewController {
+   private enum ChangeColor {
+        case red
+        case yellow
+        case green
+    }
+}
 
