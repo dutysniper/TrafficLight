@@ -30,13 +30,9 @@ final class ViewController: UIViewController {
         redLight.layer.cornerRadius = redLight.layer.frame.width / 2
         yellowLight.layer.cornerRadius = yellowLight.layer.frame.width / 2
         greenLight.layer.cornerRadius = greenLight.layer.frame.width / 2
-        redLight.layer.masksToBounds = true
-        yellowLight.layer.masksToBounds = true
-        greenLight.layer.masksToBounds = true
     }
     
     @IBAction func changeLightButtonTapped() {
-        buttonName.setTitle("NEXT", for: .normal)
         
         switch changeColor {
         case .red:
@@ -52,6 +48,10 @@ final class ViewController: UIViewController {
             greenLight.alpha = colorOn
             changeColor = .red
         }
+    }
+    
+    @IBAction func renameButtonTapped() {
+        buttonName.setTitle("NEXT", for: .normal)
     }
 }
 
