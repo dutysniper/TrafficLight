@@ -48,6 +48,7 @@
                                 </state>
                                 <connections>
                                     <action selector="changeLightButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="8HS-PJ-rte"/>
+                                    <action selector="renameButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="2I4-Wk-OEN"/>
                                 </connections>
                             </button>
                         </subviews>
